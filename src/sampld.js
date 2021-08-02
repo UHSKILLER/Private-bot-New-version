@@ -1,0 +1,20 @@
+[
+{"result": "https://rbacelia.sirv.com/thumb.jpg"},
+{"result": "https://rbacelia.sirv.com/4396066%20-%20Apothec%20Samsung%20Samsung_Sam%20mascots.jpg"},
+{"result": "https://rbacelia.sirv.com/4386314%20-%20RankerHen%20Samsung%20Samsung_Sam%20mascots.jpg"},
+{"result": "https://rbacelia.sirv.com/4387064%20-%20Notrespassers%20Samsung%20Samsung_Sam%20mascots.png"},
+{"result": "https://rbacelia.sirv.com/4387288%20-%20Samsung%20Samsung_Sam%20mascots%20zhennith.jpg"},
+{"result": "https://rbacelia.sirv.com/4387606%20-%20Mythios%20Samsung%20Samsung_Sam%20mascots.jpg"},
+{"result": "https://rbacelia.sirv.com/4388210%20-%20Aestheticc-Meme%20Samsung%20Samsung_Sam%20mascots.jpg"},
+{"result": "https://rbacelia.sirv.com/4390019%20-%20Kinkivas%20Sam%20Samsung%20Samsung_Sam%20mascots.png"},
+{"result": "https://rbacelia.sirv.com/4392719%20-%20Lainart%20Samsung%20Samsung_Sam%20mascots.jpg"},
+{"result": "https://rbacelia.sirv.com/4392724%20-%20Samsung%20Samsung_Sam%20WildBlur%20mascots.jpg"},
+{"result": "https://rbacelia.sirv.com/4393157%20-%20Samsung%20Samsung_Sam%20Shikarii%20mascots.jpg"},
+{"result": "https://rbacelia.sirv.com/4379170%20-%20Samsung%20Samsung_Sam%20bayeuxman%20mascots.jpg"},
+{"result": "https://rbacelia.sirv.com/4382709%20-%20AlmondSFM%20Samsung%20Samsung_Sam%20blender%20mascots.png"},
+{"result": "https://rbacelia.sirv.com/4379668%20-%20Samsung%20Samsung_Sam%20lulu-chan92%20mascots.jpg"},
+{"result": "https://rbacelia.sirv.com/4381666%20-%20Paloma_Piquet%20Samsung%20Samsung_Sam%20mascots.jpg"},
+{"result": "https://rbacelia.sirv.com/4378419%20-%20Sam%20Samsung%20Samsung_Sam%20mascots%20riarfian.jpg"},
+{"result": "https://rbacelia.sirv.com/4377089%20-%20Samsung%20Samsung_Sam%20mascots.jpg"},
+{"result": "https://rbacelia.sirv.com/4376990%20-%20Samsung%20Samsung_Sam%20mascots.jpg"}
+]
