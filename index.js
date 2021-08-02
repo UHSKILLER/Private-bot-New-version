@@ -7,7 +7,6 @@
 //API BAILEYS 
 const {
     WAConnection,
-    WAMessageProto,
     MessageType,
     Presence,
     Mimetype,
@@ -1106,108 +1105,6 @@ if (!isPremium) return reply(mess.only.premium)
   client.sendMessage(from, buffer, image, {quoted: mek, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": anu.result.title, 'jpegThumbnail': fs.readFileSync('kk/sticker/botlogo.webp')}}}})					
   client.sendMessage(from, lagu, audio, {mimetype: 'audio/mp4', ptt:true, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": `${anu.result.title}.mp3`, 'jpegThumbnail': await getBuffer(anu.result.thumb)}}}})
   break
-				/*case 'botao':
-				if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO
-const payload = WAMessageProto.Message.fromObject({
-   listMessage: WAMessageProto.ListMessage.fromObject({
-           title: "Opções de menu",
-           buttonText: `texto`,
-           description: `sexo`, 
-           listType: 1,
-           sections: [
-               {
-                   title: "sla",
-                   rows: [ 
-  {
-      rowId: `Oi`,
-      title: `Oi`,
-      description: ``
-  },
-  {
-   rowId: `${prefix}menu`,
-   title: `${prefix}menu`,
-   description: ""
-  },
-    {
-   rowId: `${prefix}menu`,
-   title: `.menu`,
-   description: ""
-  },
-  {
-   rowId: `.menu`,
-   title: `.menu`,
-   description: ""
-                  
-                   
-                    }
-                   ]
-               },
-           ]
-       })
-   });
-  let preparedPayload = client.prepareMessageFromContent(mek.key.remoteJid, payload, {});
-  await client.relayWAMessage(preparedPayload, {waitForAck: true})
-   break*/
-   /*case 'button':
-
-const buttons = [
-
-  {buttonId: 'id1', buttonText: {displayText: `.menu`}, type: 1},
-
-  {buttonId: 'id2', buttonText: {displayText: '.teste'}, type: 1},
-
-  {buttonId: 'id3', buttonText: {displayText: 'sla'}, type: 1}
-
-  ]
-
-const buttonMessage = {
-
-    contentText: "Oi",
-
-    footerText: 'akame bot',
-
-    buttons: buttons,
-
-    headerType: 1
-
-}
-
-client.sendMessage(from, buttonMessage, MessageType.buttonsMessage, {quoted: freply})
-
-break
-*/
-  case 'button':
-
-const rows = [
-
- {title: 'Row 1', description: "Hello it's description 1", rowId:"rowid1"},
-
- {title: 'Row 2', description: "Hello it's description 2", rowId:"rowid2"}
-
-]
-
-
-
-const sections = [{title: "Section 1", rows: rows}]
-
-
-
-const button = {
-
- buttonText: 'Click Me!',
-
- description: "Hello it's list message",
-
- sections: sections,
-
- listType: 1
-
-}
-
-client.sendMessage(from, button, MessageType.listMessage, {quoted: freply})
-
-break
-   
       case 'dinhero':          
       case 'dinheiro':       
 	     case 'meudinhero':
