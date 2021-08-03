@@ -1072,20 +1072,14 @@ client.chatRead(from)
 │VALOR : 1,000.000 💰
 ╰────────────────
 `
-              let buff = await getBuffer(`https://api-gdr2.herokuapp.com/api/leave?titulo=Private loja&nome=${encodeURI(pushname)}&perfil=${ppimg}&fundo=https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSHhRY7cxYRV40nzVXLPllEteJ5n0BGU9Yawg&usqp=CAU&grupo=DINHERO: ${dinhero}&numero=${sender.split("@")[0]}&membroConta=99`)
-   //            let buff = await getBuffer(`http://hadi-api.herokuapp.com/api/card/verify?nama=${encodeURI(pushname)}&member=${user.length}&seri=${seriTod}&pp=${ppimg}&bg=${imglu}`)
-                	/*	exec(`magick './src/wel.jpg' -gravity west -fill '#FF0000' -font './src/font-gue.ttf' -size 1280x710 -pointsize 75 -interline-spacing 7.5 -annotate +460-45 '${pushname}' -pointsize 35 -annotate +460+83 'LOJA' -pointsize 50 -annotate +460+200 'DINHERO: ${dinhero}' '${ppimg}' -resize %[fx:t?u.w*0.2:u.w]x%[fx:?u.h*0.2:u.h] -gravity center -geometry -430+70 -composite 'hamsil.jpg'`)
-				.on('error', () => reply('error'))
-				.on('exit', () => {
-			client.sendMessage(from, fs.readFileSync('hamsil.jpg'), MessageType.image, {caption: `${loja}`, contextInfo: { forwardingScore: 508, isForwarded: true}})*/
-			client.sendMessage(from, buff, image,{caption: `${loja}`,quoted: freply})
-			
+client.sendMessage(from, loja, text, {quoted: mek, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": `Seu saldo e de ${dinhero}💰`, 'jpegThumbnail': fs.readFileSync('kk/sticker/botlogo.webp')}}}})					
+          
 break
 				case 'crg':
 				if (!isRegistrar18) return reply("seu registro consta que voce tem +18 anos")//CHECAR REGISTRO
      else {
 menor = `Seu registro consta que voce tem -18`
-    client.sendMessage(from, menor, image, {quoted: freply})
+    client.sendMessage(from, menor, text, {quoted: freply})
     }
 				break
 				case 'dado': //@SUPRA 
@@ -1604,9 +1598,10 @@ case 'skiller':
 if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO
 					client.sendMessage(from, skiller(prefix) , text, {quoted: mek, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": "Comandos do dono", 'jpegThumbnail': fs.readFileSync('kk/sticker/botlogo.webp')}}}})					
                 break
+case 'vipmenu':
 case 'menuvip':
 if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO
-					client.sendMessage(from, menuvip(prefix) , text, {quoted: mek, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": "Vip menu", 'jpegThumbnail': fs.readFileSync('kk/sticker/botlogo.webp')}}}})					
+					client.sendMessage(from, menuvip(prefix) , text, {quoted: mek, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": "Comandos do vip", 'jpegThumbnail': fs.readFileSync('kk/sticker/botlogo.webp')}}}})					
                 break
 case 'menufig':
 if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO

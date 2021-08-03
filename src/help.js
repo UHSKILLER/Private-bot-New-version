@@ -3,43 +3,45 @@ return`
 𝐒𝐚𝐥𝐯𝐞 ${pushname} 𝐬𝐞𝐮 𝐥𝐢𝐧𝐝𝐨(a) 
 ╔┬━━━━━━━━━━━┈ ❄︎
 ││    𝗽𝗿𝗶𝘃𝗮𝘁𝗲 𝗯𝗼𝘁       
-││⇢ᴅᴏɴᴏ: 𝚜𝚔𝚒𝚕𝚕𝚎𝚛
-││⇢ɴᴜᴍᴇʀᴏ: *wa.me/558892594715*
-││⇢ɪɴsᴛᴀ:@joao.witorr
-││⇢ᴄᴀɴᴀʟ:↓↓↓
+││→𝘥𝘰𝘯𝘰: 𝘚𝘬𝘪𝘭𝘭𝘦𝘳 𝘖𝘧𝘤
+││→𝘯𝘶𝘮𝘦𝘳𝘰: *wa.me/558892594715*
+││→𝘪𝘯𝘴𝘵𝘢:@joao.witorr
+││→𝘤𝘢𝘯𝘢𝘭:↓↓↓
 ││→https://youtube.com/c/SkillerOfc 
-││⇢ᴘɪx:88993367542 - fale cmg pv caso doe
-││⇢ᴘʀᴇғɪx: ⌈${prefix}⌋
-││⇢𝚒𝚗𝚏𝚘 𝚌𝚘𝚟𝚒𝚍-19: ⌈${prefix}covid19⌋
-││⇢𝚌𝚊𝚜𝚘 𝚎𝚗𝚌𝚘𝚗𝚝𝚛𝚎 𝚎𝚛𝚛𝚘𝚜: ⌈${prefix}bugreport⌋
+││→𝘱𝘪𝘹:88993367542 - fale cmg pv caso doe
+││→𝘱𝘳𝘦𝘧𝘪𝘹𝘰: ⌈${prefix}⌋
+││→𝘪𝘯𝘧𝘰 𝘤𝘰𝘷𝘪𝘥-19: ⌈${prefix}covid19⌋
+││𝘤𝘢𝘴𝘰 𝘦𝘯𝘤𝘰𝘯𝘵𝘳𝘦 𝘦𝘳𝘳𝘰𝘴: ⌈${prefix}bugreport⌋
 │╰────────────┈ ❄︎
- ⊢───◣Atualizações◥───✯
- │❗ *${prefix}menuvip*❗
-│⚠️ Menu de vip
-│❗ *${prefix}dinheiro*❗
-│⚠️ Veja seu dinheiro
-│❗ *${prefix}ajudantes* ❗
-│⚠️ lista de bots 24/7... creditos gerais
- ⊢───◣𝚙𝚛𝚒𝚟𝚊𝚝𝚎◥───✯
+⊢🔴──◣*Menus em atualização*◥──🔴✯
+
+ ⊢───◣𝘈𝘵𝘶𝘢𝘭𝘪𝘻𝘢𝘤̧𝘰𝘦𝘴◥───✯
+ │❗${prefix}loja❗
+│⚠️ *loja do bot*
+│❗${prefix}menuvip❗
+│⚠️ *Menu dos vips
+│❗ ${prefix}dinheiro❗
+│⚠️ *Veja seu dinheiro*
+│❗${prefix}ajudantes❗
+│⚠️ *Bots 24/7 + creditos*
+ ⊢───◣Private◥───✯
 │
-│⇨ *${prefix}menu2* 
-│ ⚠️ segundo menu
-│⇨ *${prefix}menufig*
-│⚠️ menu de criação de stickers
-│⇨ *${prefix}plays*
-│⚠️ plays de musica
-│Downloads de audios do YT
-│⇨ *${prefix}jogos*
-│⚠️ comandos de jogos 
-│para zoar com amigos.
-│⇨ *${prefix}menuadm* 
-│ ⚠️ administração de grupos
-│⇨ *${prefix}menuvip* 
-│ ⚠️ menu para membros vip
-│⇨ *${prefix}skiller*
-│ ⚠️ comandos que so o dono do bot pode usar 
+│⇨ ${prefix}menu2
+│ ⚠️ *Segundo menu*
+│⇨ ${prefix}menufig
+│⚠️ *Menu criar figurinhas*
+│⇨ ${prefix}plays
+│⚠️ *Menu donwload de mp3*
+│⇨ ${prefix}jogos
+│⚠️ *Games pra zoar*
+│⇨ ${prefix}menuadm
+│ ⚠️ *Administração de grupos*
+│⇨ ${prefix}menuvip
+│ ⚠️ *Menu para vips*
+│⇨ ${prefix}skiller
+│ ⚠️ *Comandos que o dono usa*
 │
-╰────⟪sᴋɪʟʟᴇʀ⟫────┈✯
+╰────⟪𝘴𝘬𝘪𝘭𝘭𝘦𝘳⟫────┈✯
 ©     _*Copyright by skiller*_
 ®     _*dominando tudo⚡*_ 
 ╘────────────💫`
