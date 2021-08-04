@@ -9,6 +9,7 @@ const menuvip = (prefix) => {
 ││💶 *${prefix}hidetag*
 ││💶 *${prefix}musica*
 ││💶 *${prefix}qrcode*
+││💶 *${prefix}pack*
 │╰────────┈┈⌁
 │ _Comandos para marcação etc.._
 ╰───────────┈┈💫

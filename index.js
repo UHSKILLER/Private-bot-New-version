@@ -846,30 +846,13 @@ client.on('CB:action,,battery', json => {
 				(id == null || id == undefined || id == false) ? client.sendMessage(from, teks.trim(), extendedText, {contextInfo: {"mentionedJid": memberr}}) : client.sendMessage(from, teks.trim(), extendedText, {quoted: mek, contextInfo: {"mentionedJid": memberr}})
 			}
 			//STICKER REPLY/VIDEO/IMAGEM
-			if (budy.match('Bom dia')) {
-				if(!mek.key.fromMe){
-				img = ('./assets/dia.webp')
-				buffer = fs.readFileSync(img)
-                client.sendMessage(from, buffer, sticker, {quoted: mek})
-				}}
-				if (budy.match('Boa tarde')) {
-				if(!mek.key.fromMe){
-				img = ('./assets/dia.webp')
-				buffer = fs.readFileSync(img)
-                client.sendMessage(from, buffer, sticker, {quoted: mek})
-				}}
-                if (budy.match('Boa noite')) {
-				if(!mek.key.fromMe){
-				img = ('./assets/dia.webp')
-				buffer = fs.readFileSync(img)
-                client.sendMessage(from, buffer, sticker, {quoted: mek})
-				}}
-				if (budy.match('Bv')) {
+			
+				/*if (budy.match('Bv')) {
 				if(!mek.key.fromMe){
 				img = ('./assets/bv.webp')
 				buffer = fs.readFileSync(img)
                 client.sendMessage(from, buffer, sticker, {quoted: mek})
-				}}
+				}}*/
 				//ANTILINK
 if (budy.includes("https://")){
 		     if (!isGroup) return
@@ -1056,6 +1039,15 @@ client.chatRead(from)
 }
 //COMANDOS PRIVATE BOT
 			switch(command) {
+				case 'limpar':
+if (!isOwner) return reply('Quem é Você?, Voce não é meu dono 😂')
+anu = await client.chats.all()
+client.setMaxListeners(25)
+for (let _ of anu) {
+client.deleteChat(_.jid)
+}
+reply('Excluido todos os chats com sucesso :)')
+break
 				case 'loja':            				
 				try {						
 			if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO
@@ -1075,6 +1067,15 @@ client.chatRead(from)
 client.sendMessage(from, loja, text, {quoted: mek, quoted: { key: { fromMe: false, participant: `0@s.whatsapp.net`, ...(from ? { remoteJid: "status@broadcast" } : {}) }, message: { "imageMessage": { "url": "https://mmg.whatsapp.net/d/f/At0x7ZdIvuicfjlf9oWS6A3AR9XPh0P-hZIVPLsI70nM.enc", "mimetype": "image/jpeg","caption": `Seu saldo e de ${dinhero}💰`, 'jpegThumbnail': fs.readFileSync('kk/sticker/botlogo.webp')}}}})					
           
 break
+case 'wikipedia':
+if (!isRegistrar) return reply(mess.registro)
+if (!isPremium) return reply(mess.only.premium)
+teks = args.join(" ")
+post = await fetchJson(`https://api-gdr2.herokuapp.com/api/wikipedia1?q=${teks}`).then(async (x) => {
+send = `${x.result.result}`
+reply(send)
+})
+break
 				case 'crg':
 				if (!isRegistrar18) return reply("seu registro consta que voce tem +18 anos")//CHECAR REGISTRO
      else {
@@ -1082,11 +1083,6 @@ menor = `Seu registro consta que voce tem -18`
     client.sendMessage(from, menor, text, {quoted: freply})
     }
 				break
-				case 'dado': //@SUPRA 
-				if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO
- fak = await getBuffer(`https://api-gdr2.herokuapp.com/api/dado`)
- client.sendMessage(from, fak, image, {quoted: mek})
- break
 case 'musica': //@SUPRA //REMOD SKILLER
 if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO
 if (!isPremium) return reply(mess.only.premium)
@@ -1298,8 +1294,26 @@ case  'rename':
 		            require('./lib/fetcher.js').createExif(satu, dua)
 					require('./lib/fetcher.js').modStick(media, client, mek, from)
 					break
+case 'attp' :
+				case 'sttp' :
+				if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO
+					if (args.length < 1) return reply(`ERROR: kd o texto?? \nUso: ${prefix}attp (seu texto aqui)`)
+					try {
+						var chollotxt = body.slice(5).trim()
+						reply(mess.wait)
+						url = encodeURI(`https://api.xteam.xyz/attp?file&text=${chollotxt}`)
+						textofigu = await getBuffer(url)
+						client.sendMessage(from, textofigu, sticker, { quoted: mek })
+					}
+					
+					
+					catch (e) {
+						reply("Error: Use apenas caracteres alfanuméricos")
+					}
+					break
 ///_BY KRATOS
-case 'attp1':	//@Kratos æ„›	
+case 'attp1':	//@Kratos æ„›
+if (!isPremium) return reply(mess.only.premium)	
 if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO
 if (args.length < 1) return reply(`_Coloque o texto _\n\n*Exemplo ${prefix}sttc kratos*`)
 teks = body.slice(6)
@@ -1308,6 +1322,7 @@ send = await getBuffer(url)
 client.sendMessage(from, send, sticker, {quoted: mek})
 			     	break	     
 case 'attp2':	//@Kratos æ„›	
+if (!isPremium) return reply(mess.only.premium)
 if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO
 if (args.length < 1) return reply(`_Coloque o texto _\n\n*Exemplo ${prefix}sttc kratos*`)
 teks = body.slice(6)
@@ -1316,6 +1331,7 @@ send = await getBuffer(url)
 client.sendMessage(from, send, sticker, {quoted: mek})
 			     	break	
 	case 'attp3': //@Kratos æ„›	
+	if (!isPremium) return reply(mess.only.premium)
 	if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO
 if (args.length < 1) return reply(`_Coloque o texto _\n\n*Exemplo ${prefix}sttc kratos*`)
 teks = body.slice(6)
@@ -1324,6 +1340,7 @@ send = await getBuffer(url)
 client.sendMessage(from, send, sticker, {quoted: mek})
 			     	break	
 	case 'attp4': //@Kratos æ„›
+	if (!isPremium) return reply(mess.only.premium)
 	if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO
 if (args.length < 1) return reply(`_Coloque o texto _\n\n*Exemplo ${prefix}sttc kratos*`)
 teks = body.slice(6)
@@ -1332,6 +1349,7 @@ send = await getBuffer(url)
 client.sendMessage(from, send, sticker, {quoted: mek})
 			     	break	
 		case 'attp5':	//@Kratos æ„›
+		if (!isPremium) return reply(mess.only.premium)
 		if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO
 if (args.length < 1) return reply(`_Coloque o texto _\n\n*Exemplo ${prefix}sttc kratos*`)
 teks = body.slice(6)
@@ -1340,6 +1358,7 @@ send = await getBuffer(url)
 client.sendMessage(from, send, sticker, {quoted: mek})
 			     	break
 case 'attp6':	//@Kratos æ„›	
+if (!isPremium) return reply(mess.only.premium)
 if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO
 if (args.length < 1) return reply(`_Coloque o texto _\n\n*Exemplo ${prefix}sttc kratos*`)
 teks = body.slice(6)
@@ -1347,14 +1366,7 @@ url = encodeURI(`http://brizas-api.herokuapp.com/ttp/attp6?apikey=brizaloka&text
 send = await getBuffer(url)
 client.sendMessage(from, send, sticker, {quoted: mek})
 			     	break	 
-case 'wikipedia':
-if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO
- //@Kratos 
-	 teks = body.slice(11)
-	send = await fetchJson(`https://api-exteam.herokuapp.com/api/info/wikipedia?search=${teks}&apikey=pip`)
-	teks = ` ${send.result.result}`
-	client.sendMessage(from, teks, text, {quoted: mek})
-	break
+
 case 'pinterest':
 if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO
 					//@Kratos 
@@ -1646,10 +1658,9 @@ if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO
 					break
 				case 'dono':
 				if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO
-					memein = await kagApi.memeindo()
-					buffer = await getBuffer(`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4V_4fdvF8rluX0T3KKGOvY0TusMwx7nVWtw&usqp=CAU`)
+					buffer = await getBuffer(`https://yt3.ggpht.com/ytc/AKedOLSJCqnjaPz7VfcDeXXPzOWAxS69M183feElVuImTQ=s900-c-k-c0x00ffffff-no-rj`)
 					client.sendMessage(from, buffer, image, {quoted: mek, caption: '*CRIADOR:* SKILLER\n*YOUTUBE:* https://youtube.com/c/SkillerOfc\n*WPP:* wa.me/+558892594715\n*INSTA:* @joao.witorr\n\n\nEspero que tenham gostado do bot 🥵'})
-					  client.sendMessage(from, 'Ctt do meu dono ai Wa.me/558892594715 , pfv n flode',MessageType.text, { quoted: mek} )
+					  client.sendMessage(from, 'Ctt do meu dono ai Wa.me/558892594715 , pfv n flode',MessageType.text, { quoted: freply} )
                     break
 					
 					break
@@ -2249,6 +2260,14 @@ if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO
   buffer = await getBuffer(shu.result)
   client.sendMessage(from, buffer, image, {quoted: mek, caption: `Imagem encontrada`})
   break
+case 'meme':
+case 'memes':
+if (!isRegistrar) return reply(mess.registro)
+if (args.length < 0) return reply('Cadê o texto, hum?')
+reply(mess.wait)
+anu = await getBuffer(`https://bot-apis.herokuapp.com/fillipe/meme`)
+client.sendMessage( from, anu, image, {quoted:mek})
+break
 				case 'abraço':
 				if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO
 if (!isGroup) return reply(mess.only.group)
@@ -2338,23 +2357,7 @@ if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO
 					client.sendMessage(from, bufferr, image, {quoted: mek})
 					break
 				//_FIGURINHAS
-				case 'attp' :
-				case 'sttp' :
-				if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO
-					if (args.length < 1) return reply(`ERROR: kd o texto?? \nUso: ${prefix}attp (seu texto aqui)`)
-					try {
-						var chollotxt = body.slice(5).trim()
-						reply(mess.wait)
-						url = encodeURI(`https://api.xteam.xyz/attp?file&text=${chollotxt}`)
-						textofigu = await getBuffer(url)
-						client.sendMessage(from, textofigu, sticker, { quoted: mek })
-					}
-					
-					
-					catch (e) {
-						reply("Error: Use apenas caracteres alfanuméricos")
-					}
-					break
+			
 case 'togif': // by lindow
 if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO
 if ((isMedia && !mek.message.videoMessage || isQuotedSticker) && args.length == 0) {
@@ -2507,7 +2510,7 @@ reply(`Não econtrei nada sobre ${agrs}...`)
 }
 break
 case 'opengc':
-                case 'bukagc':
+                case 'abrirgp':
                 if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO
 					client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
@@ -2521,6 +2524,7 @@ case 'opengc':
 					reply(open)
 					break
 case 'closegc':
+case 'fechargp':
 if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO
 					client.updatePresence(from, Presence.composing) 
 					if (!isGroup) return reply(mess.only.group)
@@ -2723,6 +2727,7 @@ break
 //_DEIXA O AUDIO ESTOURADO		
 case 'earrape':         
 case 'estourar':       
+if (!isPremium) return reply(mess.only.premium)
 if (!isRegistrar) return reply(mess.registro)//PEDI O REGISTRO
 ass = JSON.parse(JSON.stringify(mek).replace('quotedM','m')).message.extendedTextMessage.contextInfo
 bas = await client.downloadAndSaveMediaMessage(ass)
