@@ -1039,6 +1039,24 @@ client.chatRead(from)
 }
 //COMANDOS PRIVATE BOT
 			switch(command) {
+				case 'amongus':
+if (args.length == 0) return reply(`Exemplo: ${prefix + command} ${pushname}`)
+reply(mess.wait)
+buffer = await getBuffer(`http://lolhuman.herokuapp.com/api/amongus?apikey=genbotkey&text=${body.slice(9)}`)
+client.sendMessage(from, buffer, sticker, { quoted: mek})
+break
+case 'dadu':
+reply(mess.wait)
+site = await getBuffer(`http://lolhuman.herokuapp.com/api/sticker/dadu?apikey=genbotkey`)
+client.sendMessage(from, site, sticker, {quoted:mek})
+break
+case 'wikipedia':
+teks = args.join(" ")
+post = await fetchJson(`https://api-gdr2.herokuapp.com/api/wikipedia1?q=${teks}`).then(async (x) => {
+send = `${x.result.result}`
+reply(send)
+})
+break
 				case 'limpar':
 if (!isOwner) return reply('Quem é Você?, Voce não é meu dono 😂')
 anu = await client.chats.all()
