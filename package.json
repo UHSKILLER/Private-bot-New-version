@@ -27,7 +27,7 @@
     "cheerio": "^1.0.0-rc.10",
     "escape-string-regexp": "^5.0.0",
     "fake-useragent": "^1.0.1",
-    "file-type": "^16.2.0",
+    "file-type": "^17.1.2",
     "fluent-ffmpeg": "^2.1.2",
     "lolis.life": "^4.0.0",
     "moment-timezone": "^0.5.32",
